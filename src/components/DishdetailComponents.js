@@ -26,74 +26,100 @@ class DishDetail extends Component {
   }
 
   renderComments(selectedDish) {
-    if (this.props.selectedDish != null) {
-      return (
-        <div>
+    if (selectedDish != null) {
+      const cmnts = selectedDish.comments.map((each) => {
+        var DaTe = new Date(each.date);
+
+        return (
           <div>
-            <div>
-              <h4>Comments</h4>
-            </div>
-            <div>
-              <strong>--{this.props.selectedDish.comments[0].comment}</strong>
-            </div>
-            <br />
-            <div>
-              <strong>
-                {this.props.selectedDish.comments[0].author} ,{" "}
-                {this.props.selectedDish.comments[0].date}
-              </strong>
-            </div>
-            <br />
-            <div>
-              <strong>--{this.props.selectedDish.comments[1].comment}</strong>
-            </div>
-            <br />
-            <div>
-              <strong>
-                {this.props.selectedDish.comments[1].author} ,{" "}
-                {this.props.selectedDish.comments[1].date}
-              </strong>
-            </div>
-            <br />
-            <div>
-              <strong>--{this.props.selectedDish.comments[2].comment}</strong>
-            </div>
-            <br />
-            <div>
-              <strong>
-                {this.props.selectedDish.comments[2].author} ,{" "}
-                {this.props.selectedDish.comments[2].date}
-              </strong>
-            </div>
-            <br />
-            <div>
-              <strong>--{this.props.selectedDish.comments[3].comment}</strong>
-            </div>
-            <br />
-            <div>
-              <strong>
-                {this.props.selectedDish.comments[3].author} ,{" "}
-                {this.props.selectedDish.comments[3].date}
-              </strong>
-            </div>
-            <br />
-            <div>
-              <strong>--{this.props.selectedDish.comments[4].comment}</strong>
-            </div>
-            <br />
-            <div>
-              <strong>
-                {this.props.selectedDish.comments[4].author} ,{" "}
-                {this.props.selectedDish.comments[4].date}
-              </strong>
-            </div>
+            <CardText>{each.comment}</CardText>
+            <CardText>
+              --{each.author} , {DaTe.getDate()}-{DaTe.getMonth()}-
+              {DaTe.getFullYear()}
+            </CardText>
+            <CardText></CardText>
           </div>
-        </div>
+        );
+      });
+      return (
+        <Card>
+          <CardTitle>Comments</CardTitle>
+          {cmnts}
+        </Card>
       );
     } else {
-      return <div></div>;
     }
   }
+
+  // renderComments(selectedDish) {
+  //   if (this.props.selectedDish != null) {
+  //     return (
+  //       <div>
+  //         <div>
+  //           <div>
+  //             <h4>Comments</h4>
+  //           </div>
+  //           <div>
+  //             <strong>--{this.props.selectedDish.comments[0].comment}</strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>
+  //               {this.props.selectedDish.comments[0].author} ,{" "}
+  //               {this.props.selectedDish.comments[0].date}
+  //             </strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>--{this.props.selectedDish.comments[1].comment}</strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>
+  //               {this.props.selectedDish.comments[1].author} ,{" "}
+  //               {this.props.selectedDish.comments[1].date}
+  //             </strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>--{this.props.selectedDish.comments[2].comment}</strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>
+  //               {this.props.selectedDish.comments[2].author} ,{" "}
+  //               {this.props.selectedDish.comments[2].date}
+  //             </strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>--{this.props.selectedDish.comments[3].comment}</strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>
+  //               {this.props.selectedDish.comments[3].author} ,{" "}
+  //               {this.props.selectedDish.comments[3].date}
+  //             </strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>--{this.props.selectedDish.comments[4].comment}</strong>
+  //           </div>
+  //           <br />
+  //           <div>
+  //             <strong>
+  //               {this.props.selectedDish.comments[4].author} ,{" "}
+  //               {this.props.selectedDish.comments[4].date}
+  //             </strong>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     );
+  //   } else {
+  //     return <div></div>;
+  //   }
+  // }
 
   render() {
     return (
