@@ -30,4 +30,6 @@ address {
 
 .navbar-dark {
   background-color: #003399;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
 }
