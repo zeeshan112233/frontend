@@ -3,6 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 class DishDetail extends Component {
   renderDish(selectedDish) {
+    console.log("ai ai ");
     if (this.props.selectedDish != null) {
       return (
         <div>
@@ -99,6 +100,7 @@ class DishDetail extends Component {
       <div className='container'>
         <div className='row'>
           <div className='col-12 col-md-5 m-1'>
+            <h1> details </h1>
             {this.renderDish(this.props.selectedDish)}
           </div>
           <div className='col-12 col-md-5'>
