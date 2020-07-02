@@ -25,9 +25,9 @@ class DishDetail extends Component {
     }
   }
 
-  renderComments(selectedDish) {
-    if (selectedDish != null) {
-      const cmnts = selectedDish.comments.map((each) => {
+  renderComments(comments) {
+    if (comments != null) {
+      const cmnts = comments.map((each) => {
         var DaTe = new Date(each.date);
 
         return (
@@ -60,7 +60,7 @@ class DishDetail extends Component {
             {this.renderDish(this.props.selectedDish)}
           </div>
           <div className='col-12 col-md-5'>
-            {this.renderComments(this.props.selectedDish)}
+            {this.renderComments(this.props.comments)}
           </div>
         </div>
       </div>

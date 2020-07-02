@@ -32,7 +32,7 @@ class Header extends Component {
         <Navbar dark expand='md'>
           <div className='container'>
             <NavbarToggler onClick={this.toggleNav} />
-            <NavbarBrand className='mr-auto' href='/'>
+            <NavbarBrand class="mx-auto" href='/'>
               {" "}
               Importext ....
               <img
@@ -45,7 +45,7 @@ class Header extends Component {
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
                 <NavItem>
-                  <NavLink className='nav-link' to='/home'>
+                  <NavLink className='nav-link '  to='/home'>
                     <span className='fa fa-home fa-lg'></span> Home
                   </NavLink>
                 </NavItem>
