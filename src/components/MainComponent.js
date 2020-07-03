@@ -46,7 +46,7 @@ class Main extends Component {
     const DishWithId = ({ match }) => {
       return (
         <DishDetail
-          selectedDish={
+          dish={
             this.props.dishes.filter(
               (dish) => dish.id === parseInt(match.params.dishId, 10)
             )[0]
