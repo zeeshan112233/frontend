@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "http://iamfaiz.github.io/react-auth-ui/",
   "dependencies": {
+    "antd": "^4.4.1",
+    "axios": "^0.19.2",
     "gh-pages": "^1.1.0",
     "history": "^5.0.0",
     "jquery": "^3.5.1",
