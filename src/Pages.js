@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import SignUpForm from "./pages/SignUpForm";
 import SignInForm from "./pages/SignInForm";
-
+import Carousel from "react-bootstrap/Carousel";
 import "./Pages.css";
 
 class Pages extends Component {
@@ -15,7 +15,29 @@ class Pages extends Component {
     return (
       <Router>
         <div className='App'>
-          <div className='App__Aside'></div>
+          <div className='App__Aside'>
+            <div style={{}}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {" "}
+                <h1> A Major Step Towards </h1>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  fontFamily: 'Open Sans'
+                }}
+              >
+                {" "}
+                <h1> " EFFECTIVE COMMUNICATION " </h1>
+              </div>
+
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <img src='assets/images/black.png' alt='Logo' />
+              </div>
+            </div>
+          </div>
           <div className='App__Form'>
             <div className='PageSwitcher'>
               <NavLink

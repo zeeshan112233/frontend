@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
-
+import Sidebar from "./Sidebar";
 const API = "http://localhost:3000/dashboard";
+
+// get data from local storate
+var localstoragedata = JSON.parse(localStorage.getItem("localstoragedata"));
+console.log(localstoragedata);
+var token = localstoragedata.token;
+console.log(token);
 
 class Addstream extends Component {
   constructor() {
@@ -36,8 +42,6 @@ class Addstream extends Component {
     let data = { name: name, description: descripton };
 
     // let data = { name, descripton };
-    let login = localStorage.getItem("login");
-    console.log(data);
 
     fetch(API, {
       method: "POST",
@@ -45,7 +49,7 @@ class Addstream extends Component {
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + login,
+        Authorization: "Bearer " + token,
       },
     }).then(function (response) {
       if (response.ok) {

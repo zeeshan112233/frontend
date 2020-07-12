@@ -43,25 +43,16 @@ class SignInForm extends Component {
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
-        
       },
     })
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {
-          console.log("Login Successfull" + res.token);
-          localStorage.setItem(
-            "login",
-            res.token
-            // JSON.stringify({
-            //   login: true,
-            //   token: res.token,
-            //})
-          );
-          // this.setState({
-          //   loggedin: true,
-          // });
-          this.props.history.push("/addstream");
+          console.log("Login Successfull" + res);
+          localStorage.clear();
+
+          localStorage.setItem("localstoragedata", JSON.stringify(res));
+          this.props.history.push("/dashboard");
           window.location.reload();
         }
       })
