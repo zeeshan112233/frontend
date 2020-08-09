@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
-import Sidebar from "./Sidebar";
 const API = "http://localhost:3000/dashboard";
 
 // get data from local storate
@@ -36,12 +35,10 @@ class Addstream extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     let name = this.state.name;
     let descripton = this.state.password;
-    let data = { name: name, description: descripton };
 
-    // let data = { name, descripton };
+    let data = { name: name, description: descripton };
 
     fetch(API, {
       method: "POST",

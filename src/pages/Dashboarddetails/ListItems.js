@@ -31,7 +31,7 @@ export default function SelectedListItem() {
   return (
     <div className={classes.root}>
       <List component='nav' aria-label='main mailbox folders'>
-        <NavLink to='/dashboard/profile'>
+        <NavLink to='/profile'>
           <ListItem
             button
             selected={selectedIndex === 0}
@@ -44,7 +44,7 @@ export default function SelectedListItem() {
           </ListItem>
         </NavLink>
 
-        <NavLink to='/dashboard/mystreams'>
+        <NavLink to='/mystreams'>
           <ListItem
             button
             selected={selectedIndex === 1}

@@ -31,6 +31,7 @@ class SignUpForm extends Component {
   }
 
   uploadimage(e) {
+    console.log(e.target.files[0]);
     this.setState({ profilephoto: e.target.files[0] });
   }
 
@@ -41,6 +42,7 @@ class SignUpForm extends Component {
     formData.append("username", this.state.name);
     formData.append("password", this.state.password);
     formData.append("profilephoto", this.state.profilephoto);
+    console.log(this.state.profilephoto);
 
     axios
       .post("http://localhost:3000/users/signup", formData, {})
@@ -54,7 +56,7 @@ class SignUpForm extends Component {
   }
 
   render() {
-    // not signed up  so redirect to login page with the return url
+    //  signed up  so redirect to login page with the return url
     if (this.state.signedup) {
       return <Redirect to={{ pathname: "/sign-in" }} />;
     } else {

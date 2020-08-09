@@ -17,8 +17,10 @@ class Pages extends Component {
         <div className='App'>
           <div className='App__Aside'>
             <div style={{}}>
+              <br></br>
+
               <div style={{ display: "flex", justifyContent: "center" }}>
-                {" "}
+                {/* {" "}
                 <h1> A Major Step Towards </h1>
               </div>
 
@@ -26,15 +28,18 @@ class Pages extends Component {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  fontFamily: 'Open Sans'
+                  fontFamily: "Open Sans",
                 }}
               >
                 {" "}
-                <h1> " EFFECTIVE COMMUNICATION " </h1>
+                <h1> " EFFECTIVE COMMUNICATION " </h1> */}
+
+                <img src='assets/images/b.jpg' alt='Logo' />
               </div>
+              <br></br>
 
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <img src='assets/images/black.png' alt='Logo' />
+                <img src='assets/images/myimage.png' alt='Logo' />
               </div>
             </div>
           </div>

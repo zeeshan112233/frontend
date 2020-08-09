@@ -1,14 +1,12 @@
 import React from "react";
 import clsx from "clsx";
 import Avatar from "@material-ui/core/Avatar";
-
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
@@ -20,6 +18,7 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import ImgMediaCard from "./Card";
 
 // rounded image
 import ExampleComponent from "react-rounded-image";
@@ -129,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Album() {
+export default function Album(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -164,7 +163,7 @@ export default function Album() {
           <Typography
             component='h1'
             variant='h6'
-            color='black'
+            color='initial'
             noWrap
             className={classes.title}
           >
@@ -174,7 +173,7 @@ export default function Album() {
           <Typography
             component='h1'
             variant='h6'
-            color='black'
+            color='initial'
             noWrap
             className={classes.title}
           >
@@ -234,7 +233,9 @@ export default function Album() {
             {/* Recent  */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                fdd
+                {props.children}
+
+                {/* <ImgMediaCard></ImgMediaCard> */}
                 <br></br>
                 <br></br>
                 <br></br>
