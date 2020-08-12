@@ -68,30 +68,6 @@ class Cards extends Component {
           updatedAt: "2020-07-13T01:12:33.338Z",
           __v: 0,
         },
-        {
-          _id: "5f0bb501f4ca524a44d6ec6d",
-          name: "AR MEETING ",
-          authour: "zeeshan yasin",
-          description: "Lecture",
-          photo:
-            "http://localhost:3000/puzzled-young-man-information-overload-vector-21228260.jpg",
-          Type: "public",
-          createdAt: "2020-07-13T01:12:33.338Z",
-          updatedAt: "2020-07-13T01:12:33.338Z",
-          __v: 0,
-        },
-        {
-          _id: "5f0bb501f4ca524a44d6ec6d",
-          name: "AR MEETING ",
-          authour: "zeeshan yasin",
-          description: "Lecture",
-          photo:
-            "http://localhost:3000/puzzled-young-man-information-overload-vector-21228260.jpg",
-          Type: "public",
-          createdAt: "2020-07-13T01:12:33.338Z",
-          updatedAt: "2020-07-13T01:12:33.338Z",
-          __v: 0,
-        },
       ],
     };
   }
