@@ -44,7 +44,7 @@ export default function SelectedListItem() {
           </ListItem>
         </NavLink>
 
-        <NavLink to='/mystreams'>
+        <NavLink to='/add'>
           <ListItem
             button
             selected={selectedIndex === 1}
@@ -53,10 +53,10 @@ export default function SelectedListItem() {
             <ListItemIcon>
               <VideocamTwoToneIcon color='primary' style={{ fontSize: 35 }} />{" "}
             </ListItemIcon>
-            <ListItemText primary='My Streams' />
+            <ListItemText primary='Start Stream' />
           </ListItem>
         </NavLink>
-        <NavLink to='/dashboard/createstream'>
+        <NavLink to='/visualise'>
           <ListItem
             button
             selected={selectedIndex === 2}

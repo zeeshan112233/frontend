@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Link, Redirect } from "react-router-dom";
+import Xlider from "./Xlider";
 class Homepage extends Component {
   render() {
     return (
@@ -25,7 +26,7 @@ class Homepage extends Component {
                   class='navbar-brand scroll-top logo  animated bounceInLeft'
                 >
                   <b>
-                    <i>{/* {Agile} */} AGILE</i>
+                    <i>{/* {Agile} */} IMPORTEXT </i>
                   </b>
                 </a>{" "}
               </div>
@@ -66,12 +67,17 @@ class Homepage extends Component {
                     {/* <Link to='/signup' className='scroll-link'>
                       Contact Us
                     </Link> */}
-                    {/* <a href='#contactUs' class='scroll-link'>
-                      Contact Us
-                    </a> */}
-                    <a href='/signup' class='scroll-link'>
+                    <a href='#contactUs' class='scroll-link'>
                       Contact Us
                     </a>
+                    {/* <a href='/signup' class='scroll-link'>
+                      Contact Us
+                    </a> */}
+                  </li>
+                  <li>
+                    <Link to='/signup' className='scroll-link'>
+                      LOGIN / SIGN UP !
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -86,13 +92,13 @@ class Homepage extends Component {
         <section id='home'>
           <div class='banner-container'>
             {/* <!-- Slider -->  */}
-
+            {/* <Xlider></Xlider> */}
             {/* <!-- end slider --> */}
           </div>
           <div class='container hero-text2'>
             <h3>
-              Lorem ipsum dolor sit amet, ea eum labitur scsstie percipitoleat
-              <br /> fabulas complectitur deterruisset at pro
+              A System for people who do use different systems for online live
+              streaming sessions.
             </h3>
           </div>
         </section>
@@ -104,12 +110,13 @@ class Homepage extends Component {
                 <div class='b1'>
                   {" "}
                   <i class='circle'>
-                    <img src='assets/images/a1.jpg' alt='' />
+                    <img src='assets/images/stream.png' alt='' />
                   </i>
-                  <h3>Bootstrap</h3>
+                  <h3>LIVE STREAMING</h3>
                   <p>
-                    Nullam ac rhoncus sapien, non gravida purus. Alinon elit
-                    imperdiet congue. Integer elit imperdiet congue.
+                    You can stream on our platform. Just go live and deliver
+                    your message to the audience. A great platform for people
+                    with audience.
                   </p>
                 </div>
               </div>
@@ -119,13 +126,12 @@ class Homepage extends Component {
               <div class='col-md-3 text-center'>
                 <div class='b1'>
                   <i class='circle'>
-                    {" "}
                     <img src='assets/images/a2.jpg' alt='' />
                   </i>
-                  <h3>Designing</h3>
+                  <h3>OTHER PLATFORM </h3>
                   <p>
-                    Nullam ac rhoncus sapien, non gravida purus. Alinon elit
-                    imperdiet congue. Integer elit imperdiet congue.
+                    If you streaming on any other platform such as Facebook or
+                    youtube. Just share a link with us and we are good to go.{" "}
                   </p>
                 </div>
               </div>
@@ -138,10 +144,10 @@ class Homepage extends Component {
                     {" "}
                     <img src='assets/images/a3.jpg' alt='' />
                   </i>
-                  <h3>Development</h3>
+                  <h3>PROCESS QUERIES</h3>
                   <p>
-                    Nullam ac rhoncus sapien, non gravida purus. Alinon elit
-                    imperdiet congue. Integer ultricies sed elit impe.
+                    Have alot of queries ? We will manage all the queries for
+                    you and make sure you see only important ones.
                   </p>
                 </div>
               </div>
@@ -154,10 +160,11 @@ class Homepage extends Component {
                     {" "}
                     <img src='assets/images/a4.jpg' alt='' />
                   </i>
-                  <h3>Mobile</h3>
+                  <h3>RANK QUERIES</h3>
                   <p>
-                    Nullam ac rhoncus sapien, non gravida purus. Alinon elit
-                    imperdiet congue. Integer elit imperdiet conempus.
+                    All your queries will be ranked according to their
+                    importance. So you see what you should see !Irrelevent
+                    queries will be ignored
                   </p>
                 </div>
               </div>
@@ -170,44 +177,35 @@ class Homepage extends Component {
           <div class='container'>
             <div class='heading text-center'>
               {/* <!-- Heading --> */}
-              <h2>About Us</h2>
+              <h2>About Importext</h2>
               <p>
-                At lorem Ipsum available, but the majority have suffered
-                alteration in some form by injected humour.
+                The major purpose of this project is to minimize this
+                communication gap. Enhance the experience of the
+                speaker/organizer and the audience.
               </p>
             </div>
             <div class='row feature design'>
               <div class='area1 columns right'>
-                <h3>Clean and Modern Design.</h3>
+                <h3>CLEAR AND EFFECTIVE COMMUNICATION !</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, ea eum labitur scsstie
-                  percipitoleat fabulas complectitur deterruisset at pro. Odio
-                  quaeque reformidans est eu, expetendis intellegebat has ut,
-                  viderer invenire ut his. Has molestie percipit an. Falli
-                  volumus efficiantur sed id, ad vel noster propriae. Ius ut
-                  etiam vivendo, graeci iudicabit constituto at mea. No soleat
-                  fabulas prodesset vel, ut quo solum dicunt. Nec et jority have
-                  suffered alteration.{" "}
+                  For the Speaker/ Organizer, ImporText will provide a facility
+                  schedule live streaming before going live. The system will
+                  save time for both organizers and audience by providing
+                  effective interaction.
                 </p>
                 <p>
-                  Odio quaeque reformidans est eu, expetendis intellegebat has
-                  ut, viderer invenire ut his. Has molestie percipit an. Falli
-                  volumus efficiantur sed id, ad vel noster propriae. Ius ut
-                  etiam vivendo, graeci iudicabit constituto at mea. No soleat
-                  fabulas prodesset vel, ut quo solum dicunt. Nec et amet
-                  vidisse mentitumsstie percipitoleat fabulas.{" "}
+                  The audience will have an option to see already answered
+                  questions. The system will maintain the record of Frequently
+                  Asked Questions. It will help the audience in a way that there
+                  will be a list of trending and featured streamers.
                 </p>
                 <a href='#' class='btn'>
-                  Download Apps
+                  Download Mobile App
                 </a>
               </div>
               <div class='area2 columns feature-media left'>
                 {" "}
-                <img
-                  src='assets/images/feature-img-1.png'
-                  alt=''
-                  width='100%'
-                />{" "}
+                <img src='assets/images/mine.png' alt='' width='70%' />{" "}
               </div>
             </div>
           </div>
@@ -326,10 +324,10 @@ class Homepage extends Component {
         <section id='work' class='page-section page'>
           <div class='container text-center'>
             <div class='heading'>
-              <h2>Events</h2>
+              <h2>STREAMS </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa,
-                alias enim placeat earum quos ab.
+                Here are the streams currently on our system. You can see anyone
+                of these or create your own.{" "}
               </p>
             </div>
             <div class='row'>
@@ -345,19 +343,19 @@ class Homepage extends Component {
                     <li>
                       {" "}
                       <a data-filter='.photography' href='#'>
-                        Design
+                        Ongoing
                       </a>{" "}
                     </li>
                     <li>
                       {" "}
                       <a data-filter='.branding' href='#'>
-                        Development
+                        Shcheduled
                       </a>{" "}
                     </li>
                     <li>
                       {" "}
                       <a data-filter='.web' href='#'>
-                        Mobile
+                        Recorded
                       </a>{" "}
                     </li>
                   </ul>
@@ -516,11 +514,11 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
-        <section id='plans' class='page-section'>
+        {/* <section id='plans' class='page-section'>
           <div class='container'>
-            <div class='heading text-center'>
-              {/* <!-- Heading --> */}
-              <h2>Our Plans</h2>
+            <div class='heading text-center'> */}
+        {/* <!-- Heading --> */}
+        {/* <h2>Our Plans</h2>
               <p>
                 At lorem Ipsum available, but the majority have suffered
                 alteration in some form by injected humour.
@@ -669,16 +667,13 @@ class Homepage extends Component {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section id='team' class='page-section'>
           <div class='container'>
             <div class='heading text-center'>
               {/* <!-- Heading --> */}
               <h2>Our Team</h2>
-              <p>
-                At variations of passages of Lorem Ipsum available, but the
-                majority have suffered alteration..
-              </p>
+              <p>We ar a team of 4 people working on this project. </p>
             </div>
             {/* <!-- Team Member's Details --> */}
             <div class='team-content'>
@@ -691,14 +686,14 @@ class Homepage extends Component {
                       {/* <!-- Image  -->  */}
                       <img
                         class='img-responsive'
-                        src='assets/images/photo-1.jpg'
+                        src='assets/images/umair.jpg'
                         alt=''
                       />{" "}
                     </div>
                     {/* <!-- Member Details --> */}
-                    <h4>John Doe</h4>
+                    <h4>Umair Mukhtar</h4>
                     {/* <!-- Designation -->  */}
-                    <span class='pos'>CEO</span>
+                    <span class='pos'>SP17-BCS-046</span>
                     <div class='team-socials'>
                       {" "}
                       <a href='#'>
@@ -727,14 +722,14 @@ class Homepage extends Component {
                       {/* <!-- Image  -->  */}
                       <img
                         class='img-responsive'
-                        src='assets/images/photo-2.jpg'
+                        src='assets/images/zeeshan.PNG'
                         alt=''
                       />{" "}
                     </div>
                     {/* <!-- Member Details --> */}
-                    <h4>Larry Doe</h4>
+                    <h4>Zeeshan Yasin</h4>
                     {/* <!-- Designation -->  */}
-                    <span class='pos'>Art Director</span>
+                    <span class='pos'>SP17-BCS-048</span>
                     <div class='team-socials'>
                       {" "}
                       <a href='#'>
@@ -763,14 +758,14 @@ class Homepage extends Component {
                       {/* <!-- Image  -->  */}
                       <img
                         class='img-responsive'
-                        src='assets/images/photo-3.jpg'
+                        src='assets/images/sir1.jpg'
                         alt=''
                       />{" "}
                     </div>
                     {/* <!-- Member Details --> */}
-                    <h4>Ranith Kays</h4>
+                    <h4>Dr. Inayat-ur-Rehman</h4>
                     {/* <!-- Designation -->  */}
-                    <span class='pos'>Manager</span>
+                    <span class='pos'>Supervisor</span>
                     <div class='team-socials'>
                       {" "}
                       <a href='#'>
@@ -799,14 +794,14 @@ class Homepage extends Component {
                       {/* <!-- Image  -->  */}
                       <img
                         class='img-responsive'
-                        src='assets/images/photo-4.jpg'
+                        src='assets/images/sir2.jpg'
                         alt=''
                       />{" "}
                     </div>
                     {/* <!-- Member Details --> */}
-                    <h4>Joan Ray</h4>
+                    <h4>Dr. Saif-ur-Rehman Khan</h4>
                     {/* <!-- Designation -->  */}
-                    <span class='pos'>Creative</span>
+                    <span class='pos'>co. supervisor</span>
                     <div class='team-socials'>
                       {" "}
                       <a href='#'>
@@ -840,8 +835,10 @@ class Homepage extends Component {
                   {/* <!-- Heading --> */}
                   <h2>Contact Us</h2>
                   <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered.
+                    If you have any queries or questions regarding any aspect of
+                    the system, or if you have any suggestions that you think
+                    will improve the systems, do let us know ! Your suggestions
+                    are apprciated !{" "}
                   </p>
                 </div>
               </div>
@@ -901,29 +898,29 @@ class Homepage extends Component {
         <footer>
           <div class='container'>
             <div class='row'>
-              <div class='col-md-3'>
+              <div class='col-md-6'>
                 <div class='col'>
                   <h4>Contact us</h4>
                   <ul>
-                    <li>1th Avenue, New York - United States</li>
-                    <li>Phone: +22 342 2345 345 | Fax: +22 724 2342 343 </li>
+                    <li>Comsats Univesty Islmabad </li>
+                    <li>Phone: +92 348 5055784 | +92 346 6510798 </li>
                     <li>
                       Email:{" "}
-                      <a href='mailto:info@example.com' title='Email Us'>
-                        info@example.com
+                      <a title='Email Us'>
+                        zeeshanyasin340@gmail.com || umairmukhtar332@gmail.com
                       </a>
                     </li>
                     <li>
                       Skype:{" "}
                       <a href='skype:my.test?call' title='Skype us'>
-                        my-company
+                        importext
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div class='col-md-3'>
+              {/* <div class='col-md-3'>
                 <div class='col'>
                   <h4>Mailing list</h4>
                   <p>
@@ -946,8 +943,8 @@ class Homepage extends Component {
                   </form>
                 </div>
               </div>
-
-              <div class='col-md-3'>
+ */}
+              <div class='col-md-6'>
                 <div class='col col-social-icons'>
                   <h4>Follow us</h4>
                   <a href='#'>
@@ -976,7 +973,7 @@ class Homepage extends Component {
                   </a>
                 </div>
               </div>
-
+              {/* 
               <div class='col-md-3'>
                 <div class='col'>
                   <h4>Latest News</h4>
@@ -989,7 +986,7 @@ class Homepage extends Component {
                     </a>
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </footer>

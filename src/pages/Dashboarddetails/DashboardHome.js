@@ -233,9 +233,9 @@ export default function Album(props) {
             {/* Recent  */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                {/* {props.children} */}
+                {props.children}
 
-                <ImgMediaCard></ImgMediaCard>
+                {/* <ImgMediaCard></ImgMediaCard> */}
                 <br></br>
                 <br></br>
                 <br></br>

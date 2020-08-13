@@ -68,6 +68,7 @@ class SignUpForm extends Component {
                 Full Name
               </label>
               <input
+                required='true'
                 type='text'
                 id='name'
                 className='FormField__Input'
@@ -83,6 +84,7 @@ class SignUpForm extends Component {
                 Password
               </label>
               <input
+                required='true'
                 type='password'
                 id='password'
                 className='FormField__Input'
@@ -98,6 +100,7 @@ class SignUpForm extends Component {
                 Upload Photo{" "}
               </label>
               <input
+                required='true'
                 type='file'
                 accept='image/*'
                 className='FormField__Input'

@@ -8,6 +8,8 @@ import Homepage from "./pages/Homepage";
 import Dashboard from "./pages/Dashboarddetails/DashboardHome";
 import Profile from "./pages/Dashboarddetails/Profile";
 
+import StartVideo from "./pages/Dashboarddetails/StartVideo";
+import VisualiseVideo from "./pages/Dashboarddetails/Visualize";
 const BaseRouter = () => (
   <div>
     <Router history={history} forceRefresh={true}>
@@ -16,7 +18,9 @@ const BaseRouter = () => (
         <Route path='/sign-in' component={Pages}></Route>
         <Route path='/signup' component={Pages}></Route>
         <Dashboard>
-          <Route path='/addstream' component={Addstream}></Route>
+          <Route path='/add' component={StartVideo}></Route>
+          <Route path='/visualise' component={VisualiseVideo}></Route>
+
           <Route path='/profile' component={Profile}></Route>
         </Dashboard>
       </Switch>

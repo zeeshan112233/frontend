@@ -72,6 +72,7 @@ class SignInForm extends Component {
             <input
               type='text'
               id='name'
+              required='true'
               className='FormField__Input'
               placeholder='Enter your full name'
               name='name'
@@ -85,6 +86,7 @@ class SignInForm extends Component {
               Password
             </label>
             <input
+              required='true'
               type='password'
               id='password'
               className='FormField__Input'
