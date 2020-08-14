@@ -3,9 +3,8 @@ class Profile extends Component {
   constructor() {
     super();
 
-    this.state = {
-    }}
-
+    this.state = {};
+  }
 
   render() {
     return <div> This is show profile page</div>;

@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     height: "100vh",
-    overflow: "auto",
+    overflow: "hidden",
   },
   container: {
     paddingTop: theme.spacing(4),
@@ -218,7 +218,7 @@ export default function Album(props) {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth='lg' className={classes.container}>
-          <Grid container spacing={3}>
+          <Grid container spacing={0}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               {/* <Paper className={fixedHeightPaper}>
@@ -227,11 +227,12 @@ export default function Album(props) {
               </Paper> */}
             </Grid>
             {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
-              {/* <Paper className={fixedHeightPaper}>sdfsdfsd</Paper> */}
-            </Grid>
+            {/* <Grid item xs={12} md={4} lg={3}> */}
+            {/* <Paper className={fixedHeightPaper}>sdfsdfsd</Paper> */}
+            {/* </Grid> */}
             {/* Recent  */}
             <Grid item xs={12}>
+              {/* <Paper className={classes.paper}> */}
               <Paper className={classes.paper}>
                 {props.children}
 

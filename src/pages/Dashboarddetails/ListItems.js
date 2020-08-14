@@ -71,7 +71,7 @@ export default function SelectedListItem() {
 
         <Divider></Divider>
 
-        <NavLink to='/dashboard/ongoingstreams'>
+        <NavLink to='/ongoingstreams'>
           <ListItem
             button
             selected={selectedIndex === 3}
@@ -84,7 +84,7 @@ export default function SelectedListItem() {
           </ListItem>
         </NavLink>
 
-        <NavLink to='/dashboard/scheduledstreams'>
+        <NavLink to='/scheduledstreams'>
           <ListItem
             button
             selected={selectedIndex === 4}
@@ -99,7 +99,7 @@ export default function SelectedListItem() {
             <ListItemText primary='Scheduled Streams' />
           </ListItem>
         </NavLink>
-        <Link to='/dashboard/recordedstreams'>
+        <Link to='/recordedstreams'>
           <ListItem
             button
             selected={selectedIndex === 5}

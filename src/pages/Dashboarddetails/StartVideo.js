@@ -1,9 +1,65 @@
 import React, { Component } from "react";
 import $ from "jquery";
 import io from "socket.io-client";
+import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
+import StarIcon from "@material-ui/icons/Star";
+
 class StartVideo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      queries: [
+        "What is your name ",
+        "Explain the detils ",
+        "What are you doing ?",
+        "What is your name ",
+        "Explain the detils ",
+        "What are you doing ?",
+        "What are you doing ?",
+        "What is your name ",
+        "Explain the detils ",
+        "What are you doing ?",
+        "What are you doing ?",
+        "What is your name ",
+        "Explain the detils ",
+        "What are you doing ?",
+      ],
+    };
+  }
+
   componentDidMount() {
     this.streamFunc();
+  }
+  printQuestions() {
+    return this.state.queries.map((data) => {
+      return (
+        <div>
+          <div
+            style={{
+              display: "flex",
+              marginLeft: "25%",
+              width: "50%",
+              backgroundColor: "orange",
+              borderRadius: 10,
+              padding: 10,
+              marginBottom: 15,
+            }}
+          >
+            <div style={{ width: "80%", marginLeft: 10 }}>
+              <p style={{ textAlign: "left" }}>{data}</p>
+            </div>
+            <div style={{ width: "30%", textAlign: "center" }}>
+              {" "}
+              <p style={{ textAlign: "left" }}>
+                <DeleteForeverIcon
+                  style={{ color: "red", height: "100%" }}
+                ></DeleteForeverIcon>
+              </p>{" "}
+            </div>
+          </div>
+        </div>
+      );
+    });
   }
   streamFunc = () => {
     const socket = io.connect("http://localhost:4001");
@@ -11,7 +67,7 @@ class StartVideo extends Component {
     var canvas = document.getElementById("preview");
     var context = canvas.getContext("2d");
 
-    canvas.width = 800;
+    canvas.width = 600;
     canvas.height = 700;
 
     context.width = canvas.width;
@@ -64,16 +120,51 @@ class StartVideo extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>THIS IS THE STREAMER SIDE</h1>
-        <video
-          src=''
-          id='video'
-          style={{ width: "800px", height: "650px" }}
-          autoplay='true'
-        ></video>
+        <div style={{ textAlign: "center" }}>
+          <h1>Your Stream has Started ! </h1>
+          <div
+            style={{
+              display: "flex",
+              width: "100%",
+            }}
+          >
+            <div style={{ width: "50%", borderRadius: 20, paddingRight: 20 }}>
+              <video
+                src=''
+                id='video'
+                style={{ width: "100%", height: "100%" }}
+                autoplay='false'
+              ></video>
+            </div>
 
-        <canvas style={{ display: "none" }} id='preview'></canvas>
-        <div id='logger'></div>
+            <div
+              style={{
+                width: "50%",
+                height: 400,
+                backgroundColor: "#D6EAF8",
+                borderRadius: 20,
+                borderWidth: 20,
+                justifyContent: "center",
+                overflowY: "hidden",
+                overflowY: "scroll",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+
+                  borderRadius: 20,
+                  borderWidth: 20,
+                }}
+              >
+                <h1> Most Important Queries ! </h1>
+              </div>
+              <div style={{}}>{this.printQuestions()}</div>
+            </div>
+          </div>
+          <canvas style={{ display: "none" }} id='preview'></canvas>
+          <div id='logger'> this is the div </div>
+        </div>
       </React.Fragment>
     );
   }

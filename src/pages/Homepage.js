@@ -97,8 +97,8 @@ class Homepage extends Component {
           </div>
           <div class='container hero-text2'>
             <h3>
-              A System for people who do use different systems for online live
-              streaming sessions.
+              {/* A System for people who do use different systems for online live
+              streaming sessions. */}
             </h3>
           </div>
         </section>
@@ -179,9 +179,8 @@ class Homepage extends Component {
               {/* <!-- Heading --> */}
               <h2>About Importext</h2>
               <p>
-                The major purpose of this project is to minimize this
-                communication gap. Enhance the experience of the
-                speaker/organizer and the audience.
+                The major purpose of this project is to minimize the
+                communication gap between Speakers and Audience. Enhance the experience using live streams.
               </p>
             </div>
             <div class='row feature design'>
