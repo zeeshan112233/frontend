@@ -3,35 +3,44 @@ import $ from "jquery";
 import io from "socket.io-client";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import StarIcon from "@material-ui/icons/Star";
+import IconButton from "@material-ui/core/IconButton";
+
+var queries = [
+  "What is your name  and what is reg no sdsdfsdfsdfdsfdss sedfdsfs sdfdsf",
+  "Explain the detils ",
+  "What are you doing ?",
+  "What is your name ",
+  "Explain the detils ",
+  "What are you doing ?",
+  "What are you doing ?",
+  "What is your name ",
+  "Explain the detils ",
+  "What are you doing ?",
+  "What are you doing ?",
+  "What is your name ",
+  "Explain the detils ",
+  "What are you doing ?",
+];
 
 class StartVideo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      queries: [
-        "What is your name ",
-        "Explain the detils ",
-        "What are you doing ?",
-        "What is your name ",
-        "Explain the detils ",
-        "What are you doing ?",
-        "What are you doing ?",
-        "What is your name ",
-        "Explain the detils ",
-        "What are you doing ?",
-        "What are you doing ?",
-        "What is your name ",
-        "Explain the detils ",
-        "What are you doing ?",
-      ],
+      queries,
     };
   }
 
   componentDidMount() {
     this.streamFunc();
   }
+  setArray(key) {
+    var newA = this.state.queries;
+    delete newA[key];
+    this.setState({ queries: newA });
+    console.log(this.state.queries);
+  }
   printQuestions() {
-    return this.state.queries.map((data) => {
+    return this.state.queries.map((data, key) => {
       return (
         <div>
           <div
@@ -45,15 +54,28 @@ class StartVideo extends Component {
               marginBottom: 15,
             }}
           >
-            <div style={{ width: "80%", marginLeft: 10 }}>
+            <div style={{ width: "10%", textAlign: "center" }}>
+              {" "}
+              <p style={{ textAlign: "left" }}>
+                <StarIcon style={{ color: "black" }}></StarIcon>
+              </p>{" "}
+            </div>
+
+            <div style={{ width: "80%", marginLeft: 10, marginTop: 5 }}>
               <p style={{ textAlign: "left" }}>{data}</p>
             </div>
             <div style={{ width: "30%", textAlign: "center" }}>
               {" "}
               <p style={{ textAlign: "left" }}>
-                <DeleteForeverIcon
-                  style={{ color: "red", height: "100%" }}
-                ></DeleteForeverIcon>
+                <IconButton
+                  onClick={() => {
+                    this.setArray(key);
+                  }}
+                >
+                  <DeleteForeverIcon
+                    style={{ color: "red", height: "100%" }}
+                  ></DeleteForeverIcon>
+                </IconButton>
               </p>{" "}
             </div>
           </div>

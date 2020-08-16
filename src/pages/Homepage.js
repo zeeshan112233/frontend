@@ -158,7 +158,7 @@ class Homepage extends Component {
                 <div class='b1'>
                   <i class='circle'>
                     {" "}
-                    <img src='assets/images/a4.jpg' alt='' />
+                    <img src='assets/images/Prioritize.png' alt='' />
                   </i>
                   <h3>RANK QUERIES</h3>
                   <p>
@@ -180,7 +180,8 @@ class Homepage extends Component {
               <h2>About Importext</h2>
               <p>
                 The major purpose of this project is to minimize the
-                communication gap between Speakers and Audience. Enhance the experience using live streams.
+                communication gap between Speakers and Audience. Enhance the
+                experience using live streams.
               </p>
             </div>
             <div class='row feature design'>
