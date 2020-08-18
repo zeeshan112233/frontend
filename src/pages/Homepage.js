@@ -92,7 +92,7 @@ class Homepage extends Component {
         <section id='home'>
           <div class='banner-container'>
             {/* <!-- Slider -->  */}
-            {/* <Xlider></Xlider> */}
+            <Xlider></Xlider>
             {/* <!-- end slider --> */}
           </div>
           <div class='container hero-text2'>
