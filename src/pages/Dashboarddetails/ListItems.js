@@ -65,7 +65,7 @@ export default function SelectedListItem() {
             <ListItemIcon>
               <VideoCallTwoToneIcon color='primary' style={{ fontSize: 35 }} />
             </ListItemIcon>
-            <ListItemText primary='Create Stream' />
+            <ListItemText primary='View Stream' />
           </ListItem>
         </NavLink>
 
@@ -99,7 +99,7 @@ export default function SelectedListItem() {
             <ListItemText primary='Scheduled Streams' />
           </ListItem>
         </NavLink>
-        <Link to='/recordedstreams'>
+        <Link to='/createstream'>
           <ListItem
             button
             selected={selectedIndex === 5}
@@ -111,7 +111,7 @@ export default function SelectedListItem() {
                 style={{ fontSize: 35 }}
               />
             </ListItemIcon>
-            <ListItemText primary='Recorded Streams' />
+            <ListItemText primary='Create Stream' />
           </ListItem>
         </Link>
       </List>

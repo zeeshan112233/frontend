@@ -11,6 +11,7 @@ import Dashboardcards from "./pages/Dashboarddetails/Card";
 
 import StartVideo from "./pages/Dashboarddetails/StartVideo";
 import VisualiseVideo from "./pages/Dashboarddetails/Visualize";
+import CreateStream from "./pages/Dashboarddetails/CreateStream";
 const BaseRouter = () => (
   <div>
     <Router history={history} forceRefresh={true}>
@@ -23,6 +24,7 @@ const BaseRouter = () => (
           <Route path='/add' component={StartVideo}></Route>
           <Route path='/visualise' component={VisualiseVideo}></Route>
           <Route path='/profile' component={Profile}></Route>
+          <Route path='/createstream' component={CreateStream}></Route>
         </Dashboard>
       </Switch>
     </Router>

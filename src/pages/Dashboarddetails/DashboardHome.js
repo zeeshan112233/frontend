@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -20,17 +21,21 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ImgMediaCard from "./Card";
 
+import { NavLink, Redirect } from "react-router-dom";
+
 // rounded image
 import ExampleComponent from "react-rounded-image";
 
 import SelectedListItem from "./ListItems";
 
 // code to get image and username from local storage ...
-var user = JSON.parse(localStorage.getItem("localstoragedata"));
-var image = user.User.profilephoto;
-var username = user.User.username;
 
-console.log(image);
+if (localStorage.getItem("localstoragedata")) {
+  var user = JSON.parse(localStorage.getItem("localstoragedata"));
+  var image = user.User.profilephoto;
+  var username = user.User.username;
+  console.log(image);
+}
 
 function Copyright() {
   return (
@@ -179,11 +184,19 @@ export default function Album(props) {
           >
             Dashboard
           </Typography>
+          <IconButton
+            color='inherit'
+            onClick={() => {
+              localStorage.removeItem("localstoragedata");
+              // <Redirect to={{ pathname: "/sign-in" }} />;
 
-          <IconButton color='inherit'>
-            <Badge badgeContent={8} color='secondary'>
-              Logout ! <NotificationsIcon />
-            </Badge>
+              return <Redirect to={{ pathname: "/sign-in" }} />;
+              // props.history.push("/sign-in");
+
+              // window.location.reload();
+            }}
+          >
+            <Badge>Logout !</Badge>
           </IconButton>
         </Toolbar>
       </AppBar>

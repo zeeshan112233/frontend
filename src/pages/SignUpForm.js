@@ -70,6 +70,7 @@ class SignUpForm extends Component {
               <input
                 required='true'
                 type='text'
+                minLength='8'
                 id='name'
                 className='FormField__Input'
                 placeholder='Enter your full name'
@@ -90,6 +91,7 @@ class SignUpForm extends Component {
                 className='FormField__Input'
                 placeholder='Enter your password'
                 name='password'
+                minLength='8'
                 value={this.state.password}
                 onChange={this.handleChange}
               />
