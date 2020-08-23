@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
+import { WaveTopBottomLoading } from "react-loadingg";
 
 const API = "http://localhost:3000/users/signup";
 
@@ -14,6 +15,7 @@ class SignUpForm extends Component {
       hasAgreed: false,
       signedup: false,
       profilephoto: "",
+      recoveryemail: "",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -42,7 +44,8 @@ class SignUpForm extends Component {
     formData.append("username", this.state.name);
     formData.append("password", this.state.password);
     formData.append("profilephoto", this.state.profilephoto);
-    console.log(this.state.profilephoto);
+    formData.append("recoveryemail", this.state.recoveryemail);
+    //console.log(this.state.profilephoto);
 
     axios
       .post("http://localhost:3000/users/signup", formData, {})
@@ -73,11 +76,12 @@ class SignUpForm extends Component {
                 minLength='8'
                 id='name'
                 className='FormField__Input'
-                placeholder='Enter your full name'
+                placeholder='USER NAME'
                 name='name'
                 value={this.state.name}
                 onChange={this.handleChange}
-              />
+              >
+              </input>
             </div>
 
             <div className='FormField'>
@@ -93,6 +97,22 @@ class SignUpForm extends Component {
                 name='password'
                 minLength='8'
                 value={this.state.password}
+                onChange={this.handleChange}
+              />
+            </div>
+
+            <div className='FormField'>
+              <label className='FormField__Label' htmlFor='recoveryemail'>
+                Recovery Email
+              </label>
+              <input
+                required='true'
+                type='email'
+                id='recoveryemail'
+                className='FormField__Input'
+                placeholder='Enter Recovery Email '
+                name='recoveryemail'
+                value={this.state.recoveryemail}
                 onChange={this.handleChange}
               />
             </div>

@@ -12,6 +12,8 @@ import Dashboardcards from "./pages/Dashboarddetails/Card";
 import StartVideo from "./pages/Dashboarddetails/StartVideo";
 import VisualiseVideo from "./pages/Dashboarddetails/Visualize";
 import CreateStream from "./pages/Dashboarddetails/CreateStream";
+var authenticated = false;
+
 const BaseRouter = () => (
   <div>
     <Router history={history} forceRefresh={true}>
@@ -19,6 +21,7 @@ const BaseRouter = () => (
         <Route exact path='/' component={Homepage}></Route>
         <Route path='/sign-in' component={Pages}></Route>
         <Route path='/signup' component={Pages}></Route>
+
         <Dashboard>
           <Route exact path='/dashboard' component={Dashboardcards}></Route>
           <Route path='/add' component={StartVideo}></Route>

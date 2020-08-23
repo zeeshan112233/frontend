@@ -11,6 +11,8 @@ import Carousel from "react-bootstrap/Carousel";
 import "./Pages.css";
 
 class Pages extends Component {
+
+
   render() {
     return (
       <Router>
@@ -20,20 +22,6 @@ class Pages extends Component {
               <br></br>
 
               <div style={{ display: "flex", justifyContent: "center" }}>
-                {/* {" "}
-                <h1> A Major Step Towards </h1>
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  fontFamily: "Open Sans",
-                }}
-              >
-                {" "}
-                <h1> " EFFECTIVE COMMUNICATION " </h1> */}
-
                 <img src='assets/images/b.jpg' alt='Logo' />
               </div>
               <br></br>

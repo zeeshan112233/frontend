@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink, Link, Redirect } from "react-router-dom";
 import Xlider from "./Xlider";
+import { BoxLoading } from "react-loadingg";
+
 class Homepage extends Component {
   render() {
     return (
@@ -26,7 +28,7 @@ class Homepage extends Component {
                   class='navbar-brand scroll-top logo  animated bounceInLeft'
                 >
                   <b>
-                    <i>{/* {Agile} */} IMPORTEXT </i>
+                    <i>{/* {Agile} */} IMPORTEXT</i>
                   </b>
                 </a>{" "}
               </div>
@@ -53,11 +55,11 @@ class Homepage extends Component {
                       Events
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href='#plans' class='scroll-link'>
                       Plans
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href='#team' class='scroll-link'>
                       Team
@@ -92,13 +94,13 @@ class Homepage extends Component {
         <section id='home'>
           <div class='banner-container'>
             {/* <!-- Slider -->  */}
-            <Xlider></Xlider>
+            <Xlider style={{ position: "absolute", height: "238px" }}></Xlider>
             {/* <!-- end slider --> */}
           </div>
           <div class='container hero-text2'>
             <h3>
-              {/* A System for people who do use different systems for online live
-              streaming sessions. */}
+              Importext will be a system to communicate with the audience in a
+              much effective and efficient way ! <BoxLoading />
             </h3>
           </div>
         </section>
@@ -179,25 +181,25 @@ class Homepage extends Component {
               {/* <!-- Heading --> */}
               <h2>About Importext</h2>
               <p>
-                The major purpose of this project is to minimize the
-                communication gap between Speakers and Audience. Enhance the
-                experience using live streams.
+                The purpose of this project is to minimize the communication gap
+                between Speakers and Audience. Enhance the experience of using
+                live streams.
               </p>
             </div>
             <div class='row feature design'>
               <div class='area1 columns right'>
                 <h3>CLEAR AND EFFECTIVE COMMUNICATION !</h3>
                 <p>
-                  For the Speaker/ Organizer, ImporText will provide a facility
-                  schedule live streaming before going live. The system will
-                  save time for both organizers and audience by providing
-                  effective interaction.
+                  For the Speaker/ Organizer, ImporText will provide the basic
+                  facility to start any stream or schedule live streaming for
+                  later. The speaker will be able to manage and communicate with
+                  his/her audience much better as he/she will only see the
+                  queries that are important !
                 </p>
                 <p>
-                  The audience will have an option to see already answered
-                  questions. The system will maintain the record of Frequently
-                  Asked Questions. It will help the audience in a way that there
-                  will be a list of trending and featured streamers.
+                  The viewers of the stream will also be facilitated. They will
+                  have an option to see already answered questions. The system
+                  will maintain the record of Frequently Asked Questions.
                 </p>
                 <a href='#' class='btn'>
                   Download Mobile App

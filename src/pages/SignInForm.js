@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Button } from "react";
 import { Link, Redirect } from "react-router-dom";
 import history from "../history";
 const API = "http://localhost:3000/users/login";
@@ -59,51 +59,53 @@ class SignInForm extends Component {
   }
   render() {
     return (
-      <div className='FormCenter'>
-        <form
-          onSubmit={this.handleSubmit}
-          className='FormFields'
-          onSubmit={this.handleSubmit}
-        >
-          <div className='FormField'>
-            <label className='FormField__Label' htmlFor='name'>
-              Full Name
-            </label>
-            <input
-              type='text'
-              id='name'
-              required='true'
-              className='FormField__Input'
-              placeholder='Enter your full name'
-              name='name'
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-          </div>
+      <div>
+        <div className='FormCenter'>
+          <form
+            onSubmit={this.handleSubmit}
+            className='FormFields'
+            onSubmit={this.handleSubmit}
+          >
+            <div className='FormField'>
+              <label className='FormField__Label' htmlFor='name'>
+                Full Name
+              </label>
+              <input
+                type='text'
+                id='name'
+                required='true'
+                className='FormField__Input'
+                placeholder='Enter your full name'
+                name='name'
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <div className='FormField'>
-            <label className='FormField__Label' htmlFor='password'>
-              Password
-            </label>
-            <input
-              required='true'
-              type='password'
-              id='password'
-              className='FormField__Input'
-              placeholder='Enter your password'
-              name='password'
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-          </div>
+            <div className='FormField'>
+              <label className='FormField__Label' htmlFor='password'>
+                Password
+              </label>
+              <input
+                required='true'
+                type='password'
+                id='password'
+                className='FormField__Input'
+                placeholder='Enter your password'
+                name='password'
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <div className='FormField'>
-            <button className='FormField__Button mr-20'>Sign In</button>{" "}
-            <Link to='/signup' className='FormField__Link'>
-              Create an account
-            </Link>
-          </div>
-        </form>
+            <div className='FormField'>
+              <button className='FormField__Button mr-20'>Sign In</button>{" "}
+              <Link to='/signup' className='FormField__Link'>
+                Sign up with us ?
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
